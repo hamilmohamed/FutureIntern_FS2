@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Registration - Employee Management System</title>
+    <link rel="stylesheet" href="/public/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="public/index.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="register">
+            <h2>Admin Registration</h2>
+            <form action="src/register.php" method="POST">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                
+                <label>Role:</label>
+                <div class="radio-group">
+                    <label for="admin">
+                        <input type="radio" id="admin" name="role" value="admin" required> Admin
+                    </label>
+                    <label for="employee">
+                        <input type="radio" id="employee" name="role" value="employee" required> Employee
+                    </label>
+                </div>
+                
+                <button type="submit">Register</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
